@@ -48,6 +48,8 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
+      {/* Removed a divider here so it could be conditionally rendered in the 
+      OnePagerVideo component only when there is a video link.  */}
       <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />

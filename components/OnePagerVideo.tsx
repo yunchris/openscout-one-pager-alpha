@@ -15,9 +15,9 @@ export const OnePagerVideo = ({
 }: OnePagerVideoProps) => {
 
   let id, timeStamp, embed, viewPort;
-  // Checks to see if there is a video link and renders null if not 
+  // Checks to see if there is a video link and renders null viewPort if not 
   if (onePagerData.pitchVideoLink) {
-    id = onePagerData.pitchVideoLink.split('?v=')[1].split("&t=")
+    id = onePagerData.pitchVideoLink.split('?v=')[1].split('&t=');
     // Opted to use iframe embed for speedy development & proof of concept:
     if (id.length === 1) embed = `https://youtube.com/embed/${id[0]}`;
     else {
