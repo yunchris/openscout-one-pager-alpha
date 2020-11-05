@@ -29,6 +29,17 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
     });
   }, []);
 
+  function videoLoad(data) {
+    if (data.pitchVideoLink) {
+      return (
+        <div>
+          <Diveder50 />
+          <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading}/>
+        </div>
+      )
+    } else return null;
+  }
+
   return (
     <Box bg='#f2f4f5'>
       <Head>
@@ -48,9 +59,11 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Diveder50 />
+      {videoLoad(onePagerData)}
+      
+      {/* <Diveder50 /> */}
 
-      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+      {/* <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} /> */}
 
       <Diveder50 />
 
