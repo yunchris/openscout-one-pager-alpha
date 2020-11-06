@@ -28,9 +28,7 @@ export const OnePagerVideo = ({
       <>
         <Diveder50 />
         <ContentCard title="Pitch Video" isLoading={isLoading}>
-          <AspectRatioBox maxW="100%" ratio={16/9} >
-            <Box as="iframe" title="pitch" src={embed} allowFullScreen />
-          </AspectRatioBox>
+          <iframe src={embed} width="100%" height="350px"/>
         </ContentCard>
       </>
     );
