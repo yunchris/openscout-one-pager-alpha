@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import React from 'react';
-import { Box, Heading, Text, Divider } from '@chakra-ui/core';
+import Head from 'next/head';
+import { Box, Heading, Divider } from '@chakra-ui/core';
 
 import { Header } from './Header';
 import { getAllPublicOnePagerData } from '../data/dataService';
 import { OnePagerPublicData } from '../model/model';
+import { Paywall } from './Paywall/Paywall';
 
 /** Renders the home component. */
 export const Home = () => {
@@ -32,7 +32,7 @@ export const Home = () => {
       <Box d='flex' justifyContent='center'>
         <Box w='xl'>
           <Heading as='h1' size='xl'>
-            One Pager Alpha!
+            One Pager Alpha: Assessment
           </Heading>
 
           <Heading as='h2' size='md'>
@@ -41,28 +41,9 @@ export const Home = () => {
 
           <Divider />
 
-          <OnePagerLinks onePagers={onePagers} />
+          <Paywall onePagers={onePagers} />
         </Box>
       </Box>
     </Box>
-  );
-};
-
-type OnePagerLinksProps = {
-  onePagers: OnePagerPublicData[];
-};
-
-const OnePagerLinks = ({ onePagers }: OnePagerLinksProps) => {
-  return (
-    <>
-      {onePagers.map((onePagerData: OnePagerPublicData) => (
-        <Box key={onePagerData.companyName} marginBottom='10px'>
-          <Link href='/[onePagerSlug]' as={`/${onePagerData.url}`}>
-            <a>{onePagerData.companyName}</a>
-          </Link>
-          <Text margin='0'>{onePagerData.briefDescription}</Text>
-        </Box>
-      ))}
-    </>
   );
 };

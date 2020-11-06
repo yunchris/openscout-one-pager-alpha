@@ -13,7 +13,8 @@ export const OnePagerVideo = ({
   isLoading,
 }: OnePagerVideoProps) => {
   let id, timeStamp, embed;
-  // Checks to see if there is a video link and returns null viewPort if not
+
+  // Renders if there is a video link and returns null if not
   if (onePagerData.pitchVideoLink) {
     id = onePagerData.pitchVideoLink.split("?v=")[1].split("&t=");
     
@@ -24,14 +25,14 @@ export const OnePagerVideo = ({
     }
 
     return (
-      <Box>
+      <>
         <Diveder50 />
         <ContentCard title="Pitch Video" isLoading={isLoading}>
           <AspectRatioBox maxW="100%" ratio={16/9} >
             <Box as="iframe" title="pitch" src={embed} allowFullScreen />
           </AspectRatioBox>
         </ContentCard>
-      </Box>
+      </>
     );
   } else return null;
 };

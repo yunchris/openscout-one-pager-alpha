@@ -30,7 +30,7 @@ export const OnePagerFinances = ({
   // Format a number to include a dollar sign. This function
   // will be improved as part of task 2.
 
-  // Initially I had used toLocaleString(), but forums indicate this regex
+  // Initially I used toLocaleString(), but forums indicate this regex
   // solution is more performant. Also toLocaleString was glitchy on Safari
   // during testing. Regex code from Stack Overflow:
   // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript

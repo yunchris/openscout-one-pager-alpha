@@ -56,11 +56,11 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <Diveder50 />
 
-      <OnePagerFAQ onePagerData={onePagerData} isLoading={isLoading} />
+      <OnePagerDashboard onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
 
-      <OnePagerDashboard onePagerData={onePagerData} isLoading={isLoading} />
+      <OnePagerFAQ onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
 
