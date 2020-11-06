@@ -7,12 +7,11 @@ import {
   Flex,
   Grid,
   CircularProgress,
-  CircularProgressLabel
+  CircularProgressLabel,
 } from "@chakra-ui/core";
 
 import { OnePagerData } from "../model/model";
 import { ContentCard } from "./ContentCard";
-import { version } from "os";
 
 type OnePagerFinancesProps = {
   onePagerData: OnePagerData;
@@ -31,8 +30,8 @@ export const OnePagerFinances = ({
   // Format a number to include a dollar sign. This function
   // will be improved as part of task 2.
 
-  // Initially I had used toLocaleString(), but forums indicated this regex 
-  // solution is more performant. Also toLocaleString was glitchy on Safari 
+  // Initially I had used toLocaleString(), but forums indicate this regex
+  // solution is more performant. Also toLocaleString was glitchy on Safari
   // during testing. Regex code from Stack Overflow:
   // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
   const formatFinanceNumber = (financeNumber: number) => {
@@ -40,28 +39,8 @@ export const OnePagerFinances = ({
     return `$${formatted}`;
   };
 
-  const progressBar = () => {
-    return (
-      <Box>
-        <Text fontSize="sm" marginTop="5px">
-          Purpose: {onePagerData.fundraisingDetails}
-        </Text>
-        <Flex justify="space-between">
-          <ProgressText>
-            Raised: {formatFinanceNumber(onePagerData.fundsRaisedInStage)}
-          </ProgressText>
-          <ProgressText>
-            {percentComplete}% of Goal:{" "}
-            {formatFinanceNumber(onePagerData.fundraisingStageGoal)}
-          </ProgressText>
-        </Flex>
-        <Progress value={percentComplete} hasStripe isAnimated height="32px" />
-      </Box>
-    );
-  };
-
   // I created a secondary version (of funding visualization) to experiment and
-  // learn more about chakra, but commented it out because it looked messier than 
+  // learn more about chakra, but commented it out because it looked messier than
   // the progress bar version. Uncomment function and invocation to view.
 
   // const pieChart = () => {
@@ -97,7 +76,21 @@ export const OnePagerFinances = ({
         <Heading as="h1" size="lg" marginRight="10px">
           Funding Stage: {onePagerData.fundraisingStage}
         </Heading>
-        {progressBar()}
+        <Box>
+          <Text fontSize="sm" marginTop="5px">
+            Purpose: {onePagerData.fundraisingDetails}
+          </Text>
+          <Flex justify="space-between">
+            <ProgressText>
+              Raised: {formatFinanceNumber(onePagerData.fundsRaisedInStage)}
+            </ProgressText>
+            <ProgressText>
+              {percentComplete}% of Goal:{" "}
+              {formatFinanceNumber(onePagerData.fundraisingStageGoal)}
+            </ProgressText>
+          </Flex>
+          <Progress value={percentComplete} hasStripe isAnimated height="32px" />
+        </Box>
       </ContentCard>
 
       {/* Version 2 */}

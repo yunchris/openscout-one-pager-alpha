@@ -12,6 +12,8 @@ import { OnePagerOverview } from './OnePagerOverview';
 import { OnePagerFounders } from './OnePagerFounders';
 import { OnePagerFinances } from './OnePagerFinances';
 import { OnePagerVideo } from './OnePagerVideo';
+import { OnePagerDashboard } from './Dashboard/OnePagerDashboard';
+import { OnePagerFAQ } from './OnePagerFAQ';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -51,6 +53,14 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       {/* Removed a divider here so it could be conditionally rendered in the 
       OnePagerVideo component only when there is a video link.  */}
       <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+
+      <Diveder50 />
+
+      <OnePagerFAQ onePagerData={onePagerData} isLoading={isLoading} />
+
+      <Diveder50 />
+
+      <OnePagerDashboard onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
 

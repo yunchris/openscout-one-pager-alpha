@@ -22,3 +22,10 @@ iframe {
   border-radius: 0.5rem;
   border-style: none;
 }
+
+button {
+  border: none;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
