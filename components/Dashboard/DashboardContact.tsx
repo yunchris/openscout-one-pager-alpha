@@ -4,26 +4,21 @@ import { Icon, Flex, SimpleGrid, Text, Skeleton } from '@chakra-ui/core';
 
 type OnePagerContactProps = {
   onePagerData: OnePagerData;
-  isLoading: boolean;
 };
 
 export const DashboardContact = ({
   onePagerData,
 }: OnePagerContactProps) => {
   const contact = onePagerData.contact[0];
-  const [buffer, setBuffer] = React.useState(null);
+  const [dataLoaded, setDataLoaded] = React.useState(false);
 
   // Wait for data to be loaded for dom
   React.useEffect(() => {
-    dataLoaded();
+    setTimeout(() =>setDataLoaded(true), 1000);
   }, []);
 
-  const dataLoaded = () => {
-    setTimeout(() =>setBuffer(true), 1000);
-  }
-
   const viewPort = () => {
-    if (!buffer) return <LoadingSkeletons />
+    if (!dataLoaded) return <LoadingSkeletons />
     else return (
       <>
         <SimpleGrid columns={2}  w="100%" mb="20px" mt="20px">

@@ -34,22 +34,13 @@ export const OnePagerDashboard = ({
         <TabList mb="1em">{tabTitles()}</TabList>
         <TabPanels>
           <TabPanel>
-            <DashboardContact
-              onePagerData={onePagerData}
-              isLoading={isLoading}
-            />
+            <DashboardContact onePagerData={onePagerData}/>
           </TabPanel>
           <TabPanel>
-            <DashboardProfits
-              onePagerData={onePagerData}
-              isLoading={isLoading}
-            />
+            <DashboardProfits onePagerData={onePagerData}/>
           </TabPanel>
           <TabPanel>
-            <DashboardStock
-              onePagerData={onePagerData}
-              isLoading={isLoading}
-            />
+            <DashboardStock onePagerData={onePagerData}/>
           </TabPanel>
         </TabPanels>
       </Tabs>

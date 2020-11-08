@@ -39,37 +39,6 @@ export const OnePagerFinances = ({
     return `$${formatted}`;
   };
 
-  // I created a secondary version (of funding visualization) to experiment and
-  // learn more about chakra, but commented it out because it looked messier than
-  // the progress bar version. Uncomment function and invocation to view.
-
-  // const pieChart = () => {
-  //   return (
-  //     <Grid templateColumns="40% 60%">
-  //       <CircularProgress
-  //         value={percentComplete}
-  //         size="140px"
-  //         thickness={0.4}
-  //         alignSelf="center"
-  //         justifySelf="center"
-  //       >
-  //         <CircularProgressLabel>{percentComplete}%</CircularProgressLabel>
-  //       </CircularProgress>
-  //       <Box>
-  //         <Text fontSize="sm" marginTop="5px">
-  //           Purpose: {onePagerData.fundraisingDetails}
-  //         </Text>
-  //         <SubHeading>
-  //           Funds Raised: {formatFinanceNumber(fundsRaised)}
-  //         </SubHeading>
-  //         <SubHeading>
-  //           Funding Goal: {formatFinanceNumber(fundsGoal)}
-  //         </SubHeading>
-  //       </Box>
-  //     </Grid>
-  //   );
-  // };
-
   return (
     <Box>
       <ContentCard title="Finances" isLoading={isLoading}>
@@ -93,13 +62,36 @@ export const OnePagerFinances = ({
         </Box>
       </ContentCard>
 
+  {/* I created a secondary version (of funding visualization) to experiment and
+  learn more about chakra, but prefer the simplicity of the first one */}
       {/* Version 2 */}
-      {/* <ContentCard title="Finances (Version 2)" isLoading={isLoading}>
+      <ContentCard title="Finances (Version 2)" isLoading={isLoading}>
         <Heading as="h1" size="lg" marginRight="10px">
           Funding Stage: {onePagerData.fundraisingStage}
         </Heading>
-        {pieChart()}
-      </ContentCard> */}
+        <Grid templateColumns="40% 60%">
+        <CircularProgress
+          value={percentComplete}
+          size="140px"
+          thickness={0.4}
+          alignSelf="center"
+          justifySelf="center"
+        >
+          <CircularProgressLabel>{percentComplete}%</CircularProgressLabel>
+        </CircularProgress>
+        <Box>
+          <Text fontSize="sm" marginTop="5px">
+            Purpose: {onePagerData.fundraisingDetails}
+          </Text>
+          <SubHeading>
+            Funds Raised: {formatFinanceNumber(fundsRaised)}
+          </SubHeading>
+          <SubHeading>
+            Funding Goal: {formatFinanceNumber(fundsGoal)}
+          </SubHeading>
+        </Box>
+      </Grid>
+      </ContentCard>
     </Box>
   );
 };
