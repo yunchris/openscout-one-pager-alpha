@@ -26,7 +26,6 @@ export const OnePagerFinances = ({
   const fundsRaised = onePagerData.fundsRaisedInStage,
     fundsGoal = onePagerData.fundraisingStageGoal,
     percentComplete = Math.floor((fundsRaised / fundsGoal) * 100);
-
   // Format a number to include a dollar sign. This function
   // will be improved as part of task 2.
 

@@ -33,15 +33,9 @@ export const OnePagerDashboard = ({
       <Tabs variant="unstyled" align="center" isFitted>
         <TabList mb="1em">{tabTitles()}</TabList>
         <TabPanels>
-          <TabPanel>
-            <DashboardContact onePagerData={onePagerData}/>
-          </TabPanel>
-          <TabPanel>
-            <DashboardProfits onePagerData={onePagerData}/>
-          </TabPanel>
-          <TabPanel>
-            <DashboardStock onePagerData={onePagerData}/>
-          </TabPanel>
+          <TabPanel><DashboardContact onePagerData={onePagerData}/></TabPanel>
+          <TabPanel><DashboardProfits onePagerData={onePagerData}/></TabPanel>
+          <TabPanel><DashboardStock onePagerData={onePagerData}/></TabPanel>
         </TabPanels>
       </Tabs>
     </ContentCard>
