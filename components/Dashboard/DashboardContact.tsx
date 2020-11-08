@@ -32,7 +32,7 @@ export const DashboardContact = ({
           </Flex>
           <Flex align="center">
             <Icon name="link" size="20px" color="blue.500" mr="10px" ml="20px"/>
-            <a href={contact.websiteURL}><SubHeading>Website</SubHeading></a>
+            <a href={contact.websiteURL} target="_blank"><SubHeading>Website</SubHeading></a>
           </Flex>
         </Flex>
         <Flex align="center" mb="20px">
