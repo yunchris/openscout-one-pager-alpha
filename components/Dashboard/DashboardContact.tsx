@@ -35,7 +35,7 @@ export const DashboardContact = ({
             <a href={contact.websiteURL} target="_blank"><SubHeading>Website</SubHeading></a>
           </Flex>
         </Flex>
-        <Flex align="center" mb="20px">
+        <Flex align="center" mb="25px">
           <Icon name="at-sign" size="20px" color="blue.500" mr="10px" ml="20px"/>
           <SubHeading>Address:</SubHeading>
           <Text color="#545454" m="0">{contact.address}</Text>
