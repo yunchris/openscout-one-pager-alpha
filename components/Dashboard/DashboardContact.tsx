@@ -1,6 +1,6 @@
 import React from 'react';
 import { OnePagerData } from "../../model/model";
-import { Icon, Flex, SimpleGrid, Text, Skeleton } from '@chakra-ui/core';
+import { Icon, Flex, Text, Skeleton } from '@chakra-ui/core';
 
 type OnePagerContactProps = {
   onePagerData: OnePagerData;

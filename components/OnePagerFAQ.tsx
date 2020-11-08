@@ -25,8 +25,8 @@ export const OnePagerFAQ = ({
         {onePagerData.faq.map((qa, idx) => {
           const [question, answer]: any = qa;
           return (
-            <AccordionItem key={idx}>
-              <AccordionHeader  p={4} fontSize={16}>
+            <AccordionItem key={idx} isOpen>
+              <AccordionHeader  p={4} fontSize={16} _expanded={{ bg: "blue.500", color: "white" }}>
                 <Box flex="1" textAlign="left"  pr={10}>
                   {question}
                 </Box>
