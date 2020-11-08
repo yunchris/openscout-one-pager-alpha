@@ -10,6 +10,7 @@ export const EMPTY_ONE_PAGER: OnePagerData = {
   briefDescription: "",
   founders: [],
   faq: [],
+  contact: []
 };
 
 const facebook: OnePagerData = {
@@ -39,6 +40,13 @@ const facebook: OnePagerData = {
     ["Which African country was formerly known as Abyssinia?", "Ethiopia"],
     ["Tennis star Serena Williams won which major tournament while pregnant with her first child?","The Australian Open"]
   ],
+  contact: [{
+    websiteURL: 'https://www.facebook.com/',
+    phoneNum: '650-543-4800',
+    email: 'press@fb.com',
+    address: '1 Hacker Way, Menlo Park, CA 94025',
+    embedSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.968361248757!2d-122.15047644913044!3d37.485072979714126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc96de8dc419%3A0x64979e438bf4e3a5!2sFacebook!5e0!3m2!1sen!2sus!4v1604793667133!5m2!1sen!2sus'
+  }]
 };
 
 const lendingClub: OnePagerData = {
@@ -66,6 +74,13 @@ const lendingClub: OnePagerData = {
     ["Fissures, vents and plugs are all associated with which geological feature?","Volcanos"],
     ["Which country consumes the most chocolate per capita?", "Switzerland"]
   ],
+  contact: [{
+    websiteURL: 'https://www.lendingclub.com/',
+    phoneNum: '888-596-3157',
+    email: 'investing@lendingclub.com',
+    address: '370 Convention Way, Redwood City, CA 94063',
+    embedSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.5684490230838!2d-122.23125964913007!3d37.494508979712364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa2505cc37e8f%3A0xcb45865a4cc613fe!2sLending%20Club!5e0!3m2!1sen!2sus!4v1604801579222!5m2!1sen!2sus'
+  }]
 };
 
 const spotify: OnePagerData = {
@@ -94,6 +109,13 @@ const spotify: OnePagerData = {
     ["Which of Shakespeare’s plays is the longest?", "Hamlet"],
     ["Which country is known as the Land of White Elephant?", "Thailand"]
   ],
+  contact: [{
+    websiteURL: 'https://www.spotify.com/',
+    phoneNum: '000-000-0000',
+    email: 'support@spotify.com',
+    address: '150 Greenwich St, 62nd Floor, New York, NY 10007',
+    embedSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3333557831697!2d-74.01448204903387!3d40.71067747923058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19f4271b4f%3A0x4cacc66312dacf65!2s150%20Greenwich%20St%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1604802031607!5m2!1sen!2sus'
+  }]
 };
 
 const workday: OnePagerData = {
@@ -121,6 +143,13 @@ const workday: OnePagerData = {
     ["Which two countries share the longest international border?","Canada and the USA"],
     ["Which bone are babies born without?", "Knee cap"]
   ],
+  contact: [{
+    websiteURL: 'https://www.workday.com/',
+    phoneNum: '925-951-9000',
+    email: 'support@spotify.com',
+    address: '6110 Stoneridge Mall Road, Pleasanton, CA 94588',
+    embedSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.9023424287907!2d-121.9288206491242!3d37.698492479674194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fec749d3c1edd%3A0xc07d4ed63ac1f680!2s6110%20Stoneridge%20Mall%20Rd%2C%20Pleasanton%2C%20CA%2094588!5e0!3m2!1sen!2sus!4v1604802184511!5m2!1sen!2sus'
+  }]
 };
 
 const zynga: OnePagerData = {
@@ -149,6 +178,13 @@ const zynga: OnePagerData = {
     ["Which mammal has no vocal cords?","Giraffe"],
     ["Power outages in the US are mostly caused by what?","Squirrels"]
   ],
+  contact: [{
+    websiteURL: 'https://www.zynga.com/',
+    phoneNum: '000-000-0000',
+    email: 'support@zynga.com',
+    address: '699 8th St, San Francisco, California 94103',
+    embedSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.834937049579!2d-122.4062944491221!3d37.770468379660905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2cf5e461db%3A0x36a365f0c229c541!2s699%208th%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1604802278341!5m2!1sen!2sus'
+  }]
 };
 
 /** Map of urls to full one pager data. */

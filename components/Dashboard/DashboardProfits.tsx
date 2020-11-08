@@ -1,4 +1,4 @@
-import { OnePagerData } from "../../model/model";
+import { OnePagerData } from '../../model/model';
 
 type OnePagerProfitsProps = {
   onePagerData: OnePagerData;
@@ -11,6 +11,6 @@ export const DashboardProfits = ({
 }: OnePagerProfitsProps) => {
 
   return (
-    <div>D3 data visualization of gross profits year over year</div>
+    <div>Data visualization of yearly profits</div>
   );
 };

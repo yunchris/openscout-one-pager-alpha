@@ -13,6 +13,14 @@ export interface OnePagerPublicData {
   briefDescription: string;
 }
 
+export interface OnePagerContactInfo {
+  websiteURL: string;
+  phoneNum: string;
+  email: string;
+  address: string;
+  embedSource: string;
+}
+
 /** Full one pager data model. */
 export interface OnePagerData {
   companyName: string;
@@ -28,4 +36,5 @@ export interface OnePagerData {
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
   faq?: string[][];
+  contact?: OnePagerContactInfo[];
 }

@@ -16,7 +16,7 @@ export const OnePagerDashboard = ({
   isLoading,
 }: OnePagerDashboardProps) => {
   const tabTitles = () => {
-    let headers = ["Gross Profits","Stock Performance","Contact Info"];
+    let headers = ["Contact Info","Gross Profits","Stock Performance"];
     return headers.map((tabTitle) => (
       <Tab
         _selected={{ color: "white", bg: "blue.500" }}
@@ -34,6 +34,12 @@ export const OnePagerDashboard = ({
         <TabList mb="1em">{tabTitles()}</TabList>
         <TabPanels>
           <TabPanel>
+            <DashboardContact
+              onePagerData={onePagerData}
+              isLoading={isLoading}
+            />
+          </TabPanel>
+          <TabPanel>
             <DashboardProfits
               onePagerData={onePagerData}
               isLoading={isLoading}
@@ -41,12 +47,6 @@ export const OnePagerDashboard = ({
           </TabPanel>
           <TabPanel>
             <DashboardStock
-              onePagerData={onePagerData}
-              isLoading={isLoading}
-            />
-          </TabPanel>
-          <TabPanel>
-            <DashboardContact
               onePagerData={onePagerData}
               isLoading={isLoading}
             />

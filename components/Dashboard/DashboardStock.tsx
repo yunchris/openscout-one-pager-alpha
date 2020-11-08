@@ -11,6 +11,6 @@ export const DashboardStock = ({
 }: OnePagerStockProps) => {
 
   return (
-    <div>D3 data visualization of Stock Performance</div>
+    <div>Data visualization of Stock Performance</div>
   );
 };

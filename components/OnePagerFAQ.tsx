@@ -23,7 +23,7 @@ export const OnePagerFAQ = ({
     <ContentCard title='F.A.Q.' isLoading={isLoading}>
       <Accordion allowToggle my="10px">
         {onePagerData.faq.map((qa, idx) => {
-          const [question, answer] = qa;
+          const [question, answer]: any = qa;
           return (
             <AccordionItem key={idx}>
               <AccordionHeader  p={4} fontSize={16}>
