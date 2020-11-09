@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import {
   Button,
   Modal,
@@ -12,8 +13,9 @@ import {
   Text,
   Link
 } from "@chakra-ui/core";
-import Cookies from 'js-cookie';
+
 import { OnePagerPublicData } from "../../model/model";
+import { CheckoutForm } from './CheckoutForm';
 
 const viewed1 = Cookies.get('viewed1');
 const viewed2 = Cookies.get('viewed2');
@@ -56,13 +58,15 @@ export const PaywallModal = ({ onePagers }) => {
           <ModalBody>
             OnePager is the best way to build, share, and analyze your raise in
             one place. Pay now to continue using this amazing service.
+            <Box id="checkout" className="hidden">
+              <CheckoutForm onClose={onClose}/>
+            </Box>
           </ModalBody>
-
-          <ModalFooter>
+          <ModalFooter id="footer">
             <Button variant="ghost" mr={3} onClick={onClose}>
               No Thank You
             </Button>
-            <Button variantColor="blue" onClick={paymentConfirmed}>PAY</Button>
+            <Button variantColor="blue" onClick={loadCheckout}>PAY</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -70,7 +74,7 @@ export const PaywallModal = ({ onePagers }) => {
   );
 };
 
-const paymentConfirmed = () => {
-  Cookies.set('paid', 'true');
-  location.reload();
+const loadCheckout = () => {
+  document.getElementById('footer').setAttribute('class', 'hidden')
+  document.getElementById('checkout').removeAttribute('class')
 }

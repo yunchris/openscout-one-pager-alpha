@@ -21,7 +21,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <Box>
+    <>
       <Head>
         <title>One Pager Alpha</title>
         <link rel='icon' href='/favicon.png' />
@@ -44,6 +44,6 @@ export const Home = () => {
           <Paywall onePagers={onePagers} />
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };

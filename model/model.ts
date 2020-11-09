@@ -21,6 +21,11 @@ export interface OnePagerContactInfo {
   embedSource: string;
 }
 
+export interface ProfitData {
+  year: number[];
+  price: number[];
+}
+
 /** Full one pager data model. */
 export interface OnePagerData {
   companyName: string;

@@ -8,7 +8,7 @@ import { OnePagerPublicData } from '../../model/model';
 const paid = Cookies.get('paid'),
       viewed1 = Cookies.get('viewed1'),
       viewed2 = Cookies.get('viewed2');
-
+      
 // Renders links & directs dependent on pay status & One Pagers viewed
 export const Paywall = ({ onePagers }) => {
   // Looks up cookies to see if paid. If paid or views not used up, allows all
@@ -26,11 +26,8 @@ export const Paywall = ({ onePagers }) => {
         ))}
       </>
     )
-  } else {
-    return (
-      <PaywallModal onePagers={onePagers} />
-    )
-  }
+  } else return <PaywallModal onePagers={onePagers} />
+  
 }
 
 const setViewed = (e) => {

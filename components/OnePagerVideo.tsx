@@ -1,4 +1,4 @@
-import { Box, AspectRatioBox, Divider } from "@chakra-ui/core";
+import { Divider } from "@chakra-ui/core";
 
 import { OnePagerData } from "../model/model";
 import { ContentCard } from "./ContentCard";
